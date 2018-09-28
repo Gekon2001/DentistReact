@@ -44,7 +44,8 @@ class LogInForm extends Component {
 				selectErr: ""
 			})
 		}
-		if ((e.target.name === "name") && state.nameErr) {
+		if ((e.target.name === "name") && state.nameErr && e.target.value.match(/\w/)) {
+			console.log(e.target.name.match(/\w/));
 			this.setState({
 				nameErr: ""
 			})
@@ -54,12 +55,12 @@ class LogInForm extends Component {
 				emailErr: ""
 			})
 		}
-		if ((e.target.name === "subject") && state.subjectErr) {
+		if ((e.target.name === "subject") && state.subjectErr && e.target.value.match(/\w/)) {
 			this.setState({
 				subjectErr: ""
 			})
 		}
-		if ((e.target.name === "description") && state.descriptionErr && (e.target.value.length <= 1000)) {
+		if ((e.target.name === "description") && state.descriptionErr && e.target.value.match(/\w/) && (e.target.value.length <= 1000)) {
 			this.setState({
 				descriptionErr: ""
 			})
@@ -79,7 +80,9 @@ class LogInForm extends Component {
 				selectErr: "You must choose something"
 			})
 		}
-		if (!state.name) {
+
+		if (!state.name || !state.name.match(/\w/)) {
+			console.log('dasdasdas')
 			errorCount++
 			this.setState({
 				nameErr: "Name cannot be blank"
@@ -91,13 +94,13 @@ class LogInForm extends Component {
 				emailErr: "You must enter real email"
 			})
 		}
-		if (!state.subject) {
+		if (!state.subject || !state.subject.match(/\w/)) {
 			errorCount++
 			this.setState({
 				subjectErr: "Subject cannot be blank"
 			})
 		}
-		if (!state.description) {
+		if (!state.description || !state.description.match(/\w/)) {
 			errorCount++
 			this.setState({
 				descriptionErr: "Description cannot be blank"
@@ -142,8 +145,7 @@ class LogInForm extends Component {
 				description: "",
 				descriptionErr:"",
 				foto: "",
-				fotoErr: "",
-				selectData: []
+				fotoErr: ""
         	});}).catch( error => {console.error(error)})  
 		}	
     }
