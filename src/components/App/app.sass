@@ -1,0 +1,476 @@
+@font-face 
+	font-family: 'Proxima Nova'
+	src: url('../../fonts/ProximaNova-Regular.eot')
+	src: url('../../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/ProximaNova-Regular.woff') format('woff'), url('../../fonts/ProximaNova-Regular.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+@font-face 
+	font-family: 'Proxima Nova Light'
+	src: url('../../fonts/ProximaNova-Light.eot')
+	src: url('../../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'), url('../../fonts/ProximaNova-Light.woff') format('woff'), url('../../fonts/ProximaNova-Light.ttf') format('truetype')
+	font-weight: light
+	font-style: normal
+
+body
+	margin: 0
+	padding: 0
+	
+.clearfix:after
+	content: ""
+	clear: both
+	display: table
+.App
+	font-family: 'Proxima Nova', sans-serif
+	font-size: 15px
+	min-width: 970px
+	*
+		transition: all 0.3s linear
+	a, ul, li, p, div, img
+		margin: 0
+		padding: 0
+		text-decoration: none
+		display: block
+	.btn
+		color: white
+		font-size: 14px
+		background-color: #73993d
+		border-radius: 5px
+		text-align: center
+		line-height: 30px
+		&:hover
+			background-color: #87b448
+			box-shadow: 0 0 3px 3px #73993d
+
+	.flex-container
+		padding: 0 15px
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+		max-width: 1440px
+		&>div
+			margin-right: 30px
+			&:last-child
+				margin-right: 0
+	
+	// header 
+	.App-header
+		position: fixed
+		background-color: #87b448
+		width: 100%
+		min-width: 970px
+		
+		.flex-container
+			align-items: center
+			
+			
+			.App-header__logo
+				padding: 13px 0
+				height: 40px
+				width: 130px
+				background: url('../../img/Logo.png') 0 10px no-repeat
+			
+			.App-header__search
+				position: relative
+				flex: 1 1 auto
+
+				.search__ico
+					position: absolute
+					left: 15px
+					top: 8.5px
+					width: 16px
+					height: 16px
+					background: url('../../img/Search.png') center
+					z-index: 10
+				
+				.search__input
+					width: 90%
+					position: relative
+					background-color: #73993d
+					border-radius: 5px
+					border: none
+					padding-left: 40px
+					line-height: 33px
+					border-radius: 3px
+					color: white
+			
+			.App-header__item_messages
+				width: 26px
+				height: 22px
+				background: url('../../img/Chat.gif')
+			
+			.App-header__item_notifications
+				width: 24px
+				height: 24px
+				background: url('../../img/Notifications.png')
+			
+			.App-header__profile:hover .profile__ico
+				border-radius: 50%
+
+			.profile__ico
+				width: 24px
+				height: 24px
+				background: url('../../img/profile.jpg') center /cover
+				float: left
+				margin-right: 10px
+				border-radius: 3px
+			
+			.profile__text
+				color: white
+				font-size: 16px
+				float: left
+	//main section .App-body
+	.App-body 
+		.flex-container
+				&>*
+					margin-right: 15px
+					&:last-child 
+						margin-right: 0px
+		padding-top: 68px
+
+		.aside-left,
+		.aside-right
+			width: 212px
+
+		nav
+			li
+				p
+					display: block
+					color: #59606b
+					font-size: 16px
+					line-height: 49px
+					padding-left: 50px
+					border-bottom: 1px solid rgba(89, 96, 107, 0.3)
+					&:hover
+						color: #87b448
+						font-weight: bold
+						border-color: rgba(136, 187, 68, 1)
+				.feed
+					background: url('../../img/Feed.png') no-repeat left
+				.ask
+					background: url('../../img/Ask.png') no-repeat left
+				.companies
+					background: url('../../img/Companies.png') no-repeat left
+				.directory
+					background: url('../../img/Services.png') no-repeat left
+
+		.block	
+			padding: 20px 0
+			border-bottom: 1px solid #d3d3d3
+			.block__title
+				font-size: 14px
+				color: #7c8695
+				float: left
+				width: 65%
+			.block__img
+				margin-top: 20px
+			.block__footer
+				font-size: 11px
+				color: #d3d3d3
+			.block__all
+				font-size: 14px
+				color: #1c2534
+				font-weight: bold
+				float: right
+				&:hover
+					color: #87b448
+			.ellipsis
+				text-overflow: ellipsis
+				white-space: nowrap
+				overflow: hidden
+			.line-clamp 
+				overflow: hidden
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-line-clamp: 2
+				-webkit-box-orient: vertical
+
+
+		.block-list
+			.ellipsis,
+			.line-clamp
+				width: 120px
+			li
+				margin-top: 20px
+				cursor: pointer
+				&>p 
+					margin-bottom: 5px
+				img
+					display: block
+					border-radius: 5px
+					float: left
+					margin-right: 10px
+					&:hover
+						border-radius: 50%
+				.block-list__title
+					font-size: 16px
+					color: #1c2534
+					font-weight: bold
+				.block-list__text
+					font-size: 14px
+					color: #7c8695
+				.block-list__link 
+					font-size: 12px
+					color: #1c2534
+					font-weight: bold
+					&:hover
+						color: #87b448
+
+		.copyright
+			color: #b7bfcd
+			font-size: 12px
+			div
+				margin-bottom: 10px
+				margin-top: 15px
+
+			span:nth-child(3)
+				margin-left: 20px
+
+		.main
+			flex: 1 1 auto
+			.service
+				.service__header
+					padding-top: 10px
+					padding-bottom: 30px
+				h1
+					font-size: 30px
+					float: left
+					margin: 0
+					padding: 0
+				.btn
+					float: right
+					width: 145px
+
+				.service__list
+					padding: 15px
+					border: 1px solid lightgray
+					border-radius: 5px
+					ul 
+						display: flex
+						flex-wrap: wrap
+						justify-content: center
+				.disconnect
+					border-color: #A30008	
+
+				.service-item
+					display: block
+					width: 140px
+					margin: 0 8px
+					cursor: pointer
+					&:hover
+						.service-item__img
+							background-color: #f4f7fb
+						.service-item__name
+							color: #71973c
+				.service-item__img
+					width: 138px
+					height: 138px
+					border: 1px solid lightgray
+				.service-item__name
+					font-size: 13.6px
+					color: #1c2534
+					padding: 10px
+					text-align: center
+					font-weight: bold
+			.modal
+
+			.modal__body
+				padding: 25px
+				margin: 50px auto
+				width: 50%
+				border-radius: 10px
+				background-color: lightgray
+				border: 1px solid #A30008
+
+			.modal__header
+				span
+					font-weight: bold
+					color: #A30008
+			.modal__text
+				margin-top: 25px
+				span
+					color: #A65200
+	//second page forma
+
+.App-form
+	font-family: 'Proxima Nova Light', sans-serif
+	position: relative
+	.form-header
+		height: 510px
+		background: url("../../img/bg1.jpg") center no-repeat / cover
+		.wrapper
+			min-width: 970px
+
+		.form-header__logo
+			float: left
+			margin-left: 50px
+			margin-top: 40px
+		.form-header__btn
+			float: right
+			margin-right: 40px
+			margin-top: 45px
+			height: 30px
+			padding: 0 20px
+
+	.form-background
+		height: 816px
+		background: url("../../img/bg2.jpg")
+
+	.form-footer
+		.form-footer__border
+			border-top: 1px solid rgba(119, 136, 153, 0.3)
+			border-bottom: 1px solid rgba(119, 136, 153, 0.3)
+		.footer-text,
+		.footer-copyright
+			padding: 0 80px
+			max-width: 1440px
+			margin: 0 auto
+		.footer-text
+			padding-bottom: 100px
+		h2
+			font-size: 30px
+			color: #1c2534
+			text-align: center
+			margin: 100px 0 50px 0
+		
+		.footer-text__left,
+		.footer-text__right
+			box-sizing: border-box
+			text-align: left
+			width: 50%
+			font-family: 'Proxima Nova', sans-serif
+			font-size: 16px
+			color: #7c8695
+			float: left
+			padding-right: 40px
+			&:last-child
+				float: right
+				padding: 0 0 0 40px
+		.footer-copyright
+			line-height: 70px
+			color: #b7bfcd
+			font-size: 12px
+			.footer-copyright__name
+				float: left
+			a 
+				float: right
+				margin-right: 20px
+	.form-login
+		font-family: 'Proxima Nova', sans-serif
+		text-align: center
+		width: 760px
+		position: absolute
+		top: 80px
+		left: 50%
+		transform: translateX(-50%)
+		.form-title
+			padding: 112px 0
+		h1
+			font-size: 48px
+			color: #f3f4f6
+			margin: 0
+		.form-title__text
+			font-size: 20px
+			color: #f3f4f6
+			line-height: 1.5em
+		.form-body
+			.input-wrapper
+				border: 1px solid lightgray
+				border-radius: 5px
+				background: white
+				text-align: left
+				padding: 18px
+				.form__label
+					color: #c1c1c1
+				textarea, select, input
+					width: 722px
+					padding: 0 15px
+					box-sizing: border-box
+					margin-top: 5px
+					border-radius: 5px
+					display: block
+				input
+					line-height: 50px
+					border: 1px solid lightgray
+					&[name='name'],
+					&[name='email']
+						width: 345px
+				.half-width
+					div
+						float: left
+						&:last-child
+							float: right
+				label
+					display: block
+				&>*:not(:last-child)
+					margin-bottom: 20px 
+				.styled-select
+					position: relative
+					select
+						height: 50px
+						appearance: none
+						background: transparent
+
+					&:before
+						content: ""
+						width: 5px
+						height: 5px
+						border-bottom: 1px solid lightgray
+						border-left: 1px solid lightgray
+						position: absolute
+						display: block
+						right: 25px
+						top: 50%
+						transform: translateY(-50%) rotate(-45deg)
+				textarea
+					height: 150px
+				.textarea__label
+					float: left
+				.textarea__counter
+					float: right	
+				.foto-loader
+					input
+						display: none
+					.foto-loader__label
+						float: left
+						box-sizing: border-box
+						width: 130px
+						height: 130px
+						border: 1px solid lightgray
+						border-radius: 5px
+						padding: 30px 15px
+						background-color: f7f7f7
+						text-align: center
+						p:first-child
+							font-size: 16px
+							color: #7c8695
+						p:nth-child(2)
+							margin-top: 5px
+							font-size: 12px
+							color: #c2c2c4
+					.foto-loader__img
+						box-sizing: border-box
+						width: 130px
+						height: 130px
+						border-radius: 5px
+						float: left
+						margin-left: 25px
+				.not-valid.not-valid
+					border-color: red
+				.form__error
+					color: red
+					font-size: 14px
+
+			.btn 
+				width: 100%
+				border: none
+				margin-top: 20px
+				line-height: 52px
+	
+
+		
+
+
+
+
+		
